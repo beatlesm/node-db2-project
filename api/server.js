@@ -12,7 +12,7 @@ server.use(express.json());
 server.use(helmet());
 server.use(cors()) // cors() returns a (req, res, nex) => { // stuff and then next() }
 
-server.use('/api/accounts', carsRouter)
+server.use('/api/cars', carsRouter)
 
 server.get('/', (req, res) => {
     res.send('Hello, I am doing db1')
