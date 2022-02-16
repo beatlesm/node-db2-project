@@ -10,5 +10,9 @@ router.get('/', (req, res, next) => {
         .catch (next)
 })
 
+router.get('/:id', md.checkCarId, (req, res) => {
+    res.status(200).json(req.car)
+})
+
 
 module.exports = router;
